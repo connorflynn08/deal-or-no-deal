@@ -14,7 +14,7 @@ Periodically, the banker may offer you to take a deal. Its up to you on what you
 
 #arrays with case numbers and money values
 cases_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-cases_values = ["$1", "$5", "$50", "$100", "$500", "$1000", "$5000", "$10000", "$20000", "$50000", "$100000", "$250000", "$500000", "$750000", "$1000000"]
+cases_values = ["$1", "$5", "$50", "$100", "$500", "$1000", "$5000", "$10,000", "$20,000", "$50,000", "$100,000", "$250,000", "$500,000", "$750,000", "$1,000,000"]
 
 #code to convert both arrays into a key and value pair. randomizes the value of the key
 cases_complete = Hash[cases_arr.zip(cases_values.shuffle)]
@@ -25,6 +25,10 @@ cases_complete = Hash[cases_arr.zip(cases_values.shuffle)]
 
     #user input loops until numbers is between 1 and 15
     users_case = gets.chomp.to_i
+    until users_case > 0
+        puts "Please pick a number higher then 0"
+        users_case = gets.chomp.to_i 
+    end
     until users_case <= 15
         puts "Please enter a number between 1 and 15"
         users_case = gets.chomp.to_i
@@ -37,6 +41,10 @@ users_complete_case = cases_complete[users_case]
 puts "Okay, your case is #{users_case}. Please pick a case you'd like to open"
 
 choose_case1 = gets.chomp.to_i
+until choose_case1 <= 15 and choose_case1 > 0
+    puts "Please pick a number between 1 and 15"
+    choose_case1 = gets.chomp.to_i
+end
 until choose_case1 != users_case
     puts "You can't choose your own case! Pick another"
     choose_case1 = gets.chomp.to_i
@@ -51,6 +59,10 @@ puts "Case #{choose_case1} contained #{opened_case1}."
 puts "Okay, choose another case"
 
 choose_case2 = gets.chomp.to_i
+until choose_case2 <= 15 and choose_case2 > 0
+    puts "Please pick a number between 1 and 15"
+    choose_case2 = gets.chomp.to_i
+end
 until choose_case2 != choose_case1 and choose_case2 != users_case
     puts "You've already tried that one, please choose another"
     choose_case2 = gets.chomp.to_i
@@ -65,6 +77,10 @@ puts "#{choose_case2} contained #{opened_case2}"
 puts "Going good! Lets open another one"
 
 choose_case3 = gets.chomp.to_i
+until choose_case3 <= 15 and choose_case3 > 0
+    puts "Please pick a number between 1 and 15"
+    choose_case3 = gets.chomp.to_i
+end
 until choose_case3 != users_case and choose_case3 != choose_case1 and choose_case3 != choose_case2
     puts "You've picked that one, choose again"
     choose_case3 = gets.chomp.to_i
@@ -98,6 +114,10 @@ puts "Okay! lets keep playing"
 puts "Go ahead and choose another case"
 
 choose_case4 = gets.chomp.to_i
+until choose_case4 <= 15 and choose_case4 > 0
+    puts "Please pick a number between 1 and 15"
+    choose_case4 = gets.chomp.to_i
+end
 until choose_case4 != users_case and choose_case4 != choose_case1 and choose_case4 != choose_case2 and choose_case4 != choose_case3
     puts "You've already chosen that case before, please choose another"
     choose_case4 = gets.chomp.to_i
@@ -110,4 +130,42 @@ puts "Lets see what's behind #{choose_case4}"
 puts "#{choose_case4} contained #{opened_case4}"
 
 puts "Alright, another case down. Choose another"
+
+choose_case5 = gets.chomp.to_i
+until choose_case5 <= 15 and choose_case5 > 0
+    puts "Please pick a number between 1 and 15"
+    choose_case5 = gets.chomp.to_i
+end
+until choose_case5 != users_case and choose_case5 != choose_case4 and choose_case5 != choose_case3 and choose_case5 != choose_case2 and choose_case5 != choose_case1
+    puts "You've already chosen that case before, please choose another"
+    choose_case5 = gets.chomp.to_i
+end
+
+opened_case5 = cases_complete[choose_case5]
+
+puts "lets see what was in #{choose_case5}!"
+
+puts "#{choose_case5} contained #{opened_case5}"
+
+puts "Alright, we're a third of the way there"
+
+puts "Time to open another case"
+
+choose_case6 = gets.chomp.to_i
+until choose_case6 <= 15 and choose_case6 > 0
+    puts "PLease pick a number between 1 and 15"
+    choose_case6 = gets.chomp.to_i
+end
+until choose_case6 != users_case and choose_case6 != choose_case5 and choose_case6 != choose_case4 and choose_case6 != choose_case3 and choose_case6 != choose_case2 and choose_case6 != choose_case1
+    puts "You've already chosen that case before, please pick again"
+    choose_case6 = gets.chomp.to_i
+end
+
+opened_case6 = cases_complete[choose_case6]
+
+puts "Ok, lets see what was in #{choose_case6}"
+
+puts "#{choose_case6} contained #{opened_case6}"
+
+puts "Ok, going strong. Lets open some more cases"
 
