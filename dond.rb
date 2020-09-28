@@ -15,6 +15,7 @@ Periodically, the banker may offer you to take a deal. Its up to you on what you
 #arrays with case numbers and money values
 cases_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 cases_values = ["$1", "$5", "$50", "$100", "$500", "$1000", "$5000", "$10,000", "$20,000", "$50,000", "$100,000", "$250,000", "$500,000", "$750,000", "$1,000,000"]
+#empty array that takes already chosen values and puts prevents the user from selecting them again
 used_cases = []
 #code to convert both arrays into a key and value pair. randomizes the value of the key
 cases_complete = Hash[cases_arr.zip(cases_values.shuffle)]
@@ -266,3 +267,149 @@ until choose_case9 != users_case and used_cases.include?(choose_case9) == false
     choose_case9 = gets.chomp.to_i
 end
 
+opened_case9 = cases_complete[choose_case9]
+
+used_cases << choose_case9
+
+puts "Ok, let's see what was behind case number #{choose_case9}"
+
+puts "#{choose_case9} contained #{opened_case9}"
+
+puts "9 cases down, lets continue"
+
+choose_case10 = gets.chomp.to_i
+    until choose_case10 <= 15 and choose_case10 > 0
+        puts "Please pick a number between 1 and 15"
+        choose_case10 = gets.chomp.to_i
+    end
+
+until choose_case10 != users_case and used_cases.include?(choose_case10) == false
+    puts "You've already chosen that case, please pick another"
+    choose_case10 = gets.chomp.to_i
+end
+
+opened_case10 = cases_complete[choose_case10]
+
+used_cases << choose_case10
+
+puts "Time to look inside case #{choose_case10}"
+
+puts "#{choose_case10} contained #{opened_case10}"
+
+puts "Okay, we're heading into the end game now. Lets continue"
+
+choose_case11 = gets.chomp.to_i
+    until choose_case11 <= 15 and choose_case11 > 0
+        puts "Please pick a number between 1 and 15"
+        choose_case11 = gets.chomp.to_i
+    end
+
+until choose_case11 != users_case and used_cases.include?(choose_case11) == false
+    puts "You've already chosen that case, please pick another"
+    choose_case11 = gets.chomp.to_i
+end
+
+opened_case11 = cases_complete[choose_case11]
+
+used_cases << choose_case11
+
+puts "Lets see what was inside case number #{choose_case11}"
+
+puts "#{choose_case11} contained #{opened_case11}"
+
+puts "Alright, lets keep marching on. Pick another case"
+
+choose_case12 = gets.chomp.to_i
+    until choose_case12 <= 15 and choose_case12 > 0
+        puts "Please pick a number between 1 and 15"
+        choose_case12 = gets.chomp.to_i
+    end
+
+until choose_case12 != users_case and used_cases.include?(choose_case12) == false
+    puts "You've already chosen that case, please pick another"
+    choose_case12 = gets.chomp.to_i
+end
+
+opened_case12 = cases_complete[choose_case12]
+
+used_cases << choose_case12
+
+puts "Let's see whats behind case number #{choose_case12}"
+
+puts "#{choose_case12} contained #{opened_case12}"
+
+banker3 = rand(500000)
+
+puts "Ring Ring!"
+
+puts "Looks like it's the banker again. This will be the last deal he's going to offer you"
+
+puts "The banker would like to offer you $#{banker3}. Deal? or no deal?"
+
+dond3 = gets.chomp.downcase
+
+
+until dond3 == "deal" or dond3 == "no deal"
+    puts "Please enter deal or no deal"
+    dond3 = gets.chomp.downcase
+end 
+
+    if dond3 == "deal"
+        puts "Deal! your total winnings is $#{banker3}. Thanks for playing!"
+        exit
+    end
+
+    if dond3 == "no deal"
+        puts "No deal! Lets continue!"
+    end
+
+
+puts "2 cases remain. Lets continue"
+
+puts "Please choose a case"
+
+choose_case13 = gets.chomp.to_i
+    until choose_case13 <= 15 and choose_case13 > 0
+        puts "Please pick a number between 1 and 15"
+        choose_case13 = gets.chomp.to_i
+    end
+
+until choose_case13 != users_case and used_cases.include?(choose_case13) == false
+    puts "You've already chosen that case, please pick another"
+    choose_case13 = gets.chomp.to_i
+end
+
+opened_case13 = cases_complete[choose_case13]
+
+used_cases << choose_case13
+
+puts "Alright, lets have a peek behind case number #{choose_case13}"
+
+puts "#{choose_case13} contained #{opened_case13}"
+
+puts "Ok, this is the last case to choose before we open up yours"
+
+puts "Please choose your last case"
+
+choose_case14 = gets.chomp.to_i
+    until choose_case14 <= 15 and choose_case14 > 0
+        puts "Please pick a number between 1 and 15"
+        choose_case14 = gets.chomp.to_i
+    end
+
+until choose_case14 != users_case and used_cases.include?(choose_case14) == false
+    puts "You've already chosen that case, please pick another"
+    choose_case14 = gets.chomp.to_i
+end
+
+opened_case14 = cases_complete[choose_case14]
+
+used_cases << choose_case14
+
+puts "Alright, this is it. Lets see how you did"
+
+puts "#{choose_case14} contained #{opened_case14}"
+
+puts "Which means your case contained #{users_complete_case}"
+
+puts "Congratulations! Thanks for playing Deal or no Deal!"
