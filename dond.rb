@@ -7,6 +7,7 @@
 # the game will utilize a soundboard using ruby gems and play sounds at different occasions
 # a ringing noise for the banker ringing to offer a deal, crowd noises etc.
 
+pid = fork{ exec 'afplay', "intro.mp3" }
 
 puts "Welcome to Deal or No Deal!"
 puts "The rules are simple. Each briefcase has a number in it that indicates the amount of money you'll win if when you open it. 
@@ -101,6 +102,8 @@ puts "Lets have a look at what was in case number #{choose_case3}"
 
 puts "#{choose_case3} contained #{opened_case3}"
 
+pid = fork{ exec 'afplay', "banker.mp3" }
+
 puts "Ring Ring!"
 
 puts "It's the banker, he'd like to offer you a deal"
@@ -116,11 +119,13 @@ until dond1 == "deal" or dond1 == "no deal"
 end
     if dond1 == "deal"
         puts "Deal! Your total winnings is $#{banker1}. Thanks for playing!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond1 == "no deal"
         puts "No deal! Lets continue!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
 
@@ -230,6 +235,8 @@ puts "#{choose_case8} contained #{opened_case8}"
 
 puts "Ring Ring!"
 
+pid = fork{ exec 'afplay', "banker.mp3" }
+
 banker2 = rand(70000)
 
 puts "That'll be the banker again, I think he'd like to offer you another deal!"
@@ -246,11 +253,13 @@ end
 
     if dond2 == "deal"
         puts "Deal! your total winnings is $#{banker2}. Thanks for playing!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond2 == "no deal"
         puts "No deal! Lets continue!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
 puts "Time to pick another case, what will it be?"
@@ -340,6 +349,8 @@ puts "#{choose_case12} contained #{opened_case12}"
 
 banker3 = rand(500000)
 
+pid = fork{ exec 'afplay', "banker.mp3" }
+
 puts "Ring Ring!"
 
 puts "Looks like it's the banker again. This will be the last deal he's going to offer you"
@@ -356,11 +367,13 @@ end
 
     if dond3 == "deal"
         puts "Deal! your total winnings is $#{banker3}. Thanks for playing!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond3 == "no deal"
         puts "No deal! Lets continue!"
+        pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
 
@@ -413,3 +426,6 @@ puts "#{choose_case14} contained #{opened_case14}"
 puts "Which means your case contained #{users_complete_case}"
 
 puts "Congratulations! Thanks for playing Deal or no Deal!"
+
+pid = fork{ exec 'afplay', "intro.mp3" }
+
