@@ -38,6 +38,10 @@ cases_complete = Hash[cases_arr.zip(cases_values.shuffle)]
         puts "Please enter a number between 1 and 15".colorize(:red)
         users_case = gets.chomp.to_i
     end
+    until users_case != String 
+        puts "Please enter a number, not letters"
+        users_case = gets.chomp.to_i
+    end
 
 
     #users case with random value inside
