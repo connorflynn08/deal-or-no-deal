@@ -1,5 +1,5 @@
 # Deal or no deal. The user picks a a case between 1 and 20
-# the money behind the case is random, and cases will use a key and value system for sotring data, possible even 2 arrays mihgt make it easier
+# the money behind the case is random, and cases will use a key and value system for sotring data, possible even 2 arrays might make it easier
 # Pseudocode
 # "The Banker" will periodically (every 5 turns?) offer the player a sum of money, which the player is able to accept or decline
 # if accepted the game ends, if declined, the game continues
@@ -14,6 +14,7 @@ pid = fork{ exec 'afplay', "intro.mp3" }
 
 puts "Welcome to Deal or No Deal!"
 puts "The rules are simple. Each briefcase has a number in it that indicates the amount of money you'll win if when you open it. 
+You will systematically choose cases until only yours remains. 
 Periodically, the banker may offer you to take a deal. Its up to you on what you want to do!"
 
 #arrays with case numbers and money values
