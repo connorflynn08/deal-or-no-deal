@@ -7,6 +7,9 @@
 # the game will utilize a soundboard using ruby gems and play sounds at different occasions
 # a ringing noise for the banker ringing to offer a deal, crowd noises etc.
 
+require 'colorize'
+require 'colorized_string'
+
 pid = fork{ exec 'afplay', "intro.mp3" }
 
 puts "Welcome to Deal or No Deal!"
@@ -28,11 +31,11 @@ cases_complete = Hash[cases_arr.zip(cases_values.shuffle)]
     #user input loops until numbers is between 1 and 15
     users_case = gets.chomp.to_i
     until users_case > 0
-        puts "Please pick a number higher then 0"
+        puts "Please pick a number higher then 0".colorize(:red)
         users_case = gets.chomp.to_i 
     end
     until users_case <= 15
-        puts "Please enter a number between 1 and 15"
+        puts "Please enter a number between 1 and 15".colorize(:red)
         users_case = gets.chomp.to_i
     end
 
@@ -44,11 +47,11 @@ puts "Okay, your case is #{users_case}. Please pick a case you'd like to open"
 
 choose_case1 = gets.chomp.to_i
 until choose_case1 <= 15 and choose_case1 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case1 = gets.chomp.to_i
 end
 until choose_case1 != users_case
-    puts "You can't choose your own case! Pick another"
+    puts "You can't choose your own case! Pick another".colorize(:red)
     choose_case1 = gets.chomp.to_i
 end
 
@@ -64,11 +67,11 @@ puts "Okay, choose another case"
 
 choose_case2 = gets.chomp.to_i
 until choose_case2 <= 15 and choose_case2 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case2 = gets.chomp.to_i
 end
 until choose_case2 != used_cases[0] and choose_case2 != users_case
-    puts "You've already tried that one, please choose another"
+    puts "You've already tried that one, please choose another".colorize(:red)
     choose_case2 = gets.chomp.to_i
 end
 
@@ -84,11 +87,11 @@ puts "Going good! Lets open another one"
 
 choose_case3 = gets.chomp.to_i
 until choose_case3 <= 15 and choose_case3 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case3 = gets.chomp.to_i
 end
 until choose_case3 != users_case and used_cases.include?(choose_case3) == false
-    puts "You've picked that one, choose again"
+    puts "You've picked that one, choose again".colorize(:red)
     choose_case3 = gets.chomp.to_i
 end
 
@@ -114,7 +117,7 @@ dond1 = gets.chomp
 dond1 = dond1.downcase
 
 until dond1 == "deal" or dond1 == "no deal"
-    puts "Please enter deal or no deal"
+    puts "Please enter deal or no deal".colorize(:red)
     dond1 = gets.chomp.downcase
 end
     if dond1 == "deal"
@@ -135,11 +138,11 @@ puts "Go ahead and choose another case"
 
 choose_case4 = gets.chomp.to_i
 until choose_case4 <= 15 and choose_case4 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case4 = gets.chomp.to_i
 end
 until choose_case4 != users_case and used_cases.include?(choose_case4) == false
-    puts "You've already chosen that case before, please choose another"
+    puts "You've already chosen that case before, please choose another".colorize(:red)
     choose_case4 = gets.chomp.to_i
 end
 
@@ -155,11 +158,11 @@ puts "Alright, another case down. Choose another"
 
 choose_case5 = gets.chomp.to_i
 until choose_case5 <= 15 and choose_case5 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case5 = gets.chomp.to_i
 end
 until choose_case5 != users_case and used_cases.include?(choose_case5) == false
-    puts "You've already chosen that case before, please choose another"
+    puts "You've already chosen that case before, please choose another".colorize(:red)
     choose_case5 = gets.chomp.to_i
 end
 
@@ -177,11 +180,11 @@ puts "Time to open another case"
 
 choose_case6 = gets.chomp.to_i
 until choose_case6 <= 15 and choose_case6 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case6 = gets.chomp.to_i
 end
 until choose_case6 != users_case and used_cases.include?(choose_case6) == false
-    puts "You've already chosen that case before, please pick again"
+    puts "You've already chosen that case before, please pick again".colorize(:red)
     choose_case6 = gets.chomp.to_i
 end
 
@@ -197,11 +200,11 @@ puts "Ok, going strong. Lets open some more cases"
 
 choose_case7 = gets.chomp.to_i
 until choose_case7 <= 15 and choose_case7 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case7 = gets.chomp.to_i
 end
 until choose_case7 != users_case and used_cases.include?(choose_case7) == false
-    puts "That case has already been chosen, please pick another"
+    puts "That case has already been chosen, please pick another".colorize(:red)
     choose_case7 = gets.chomp.to_i
 end
 
@@ -217,11 +220,11 @@ puts "Getting closer, lets open some more"
 
 choose_case8 = gets.chomp.to_i
 until choose_case8 <= 15 and choose_case8 > 0
-    puts "Please pick a number between 1 and 15"
+    puts "Please pick a number between 1 and 15".colorize(:red)
     choose_case8 = gets.chomp.to_i
 end
 until choose_case8 != users_case and used_cases.include?(choose_case8) == false
-    puts "That case has already been chosen, please pick another"
+    puts "That case has already been chosen, please pick another".colorize(:red)
     choose_case8 = gets.chomp.to_i
 end
 
@@ -267,12 +270,12 @@ puts "Time to pick another case, what will it be?"
 choose_case9 = gets.chomp.to_i
 
 until choose_case9 <= 15 and choose_case9 > 0
-    puts "Please put a number between 1 and 15"
+    puts "Please put a number between 1 and 15".colorize(:red)
     choose_case9 = gets.chomp.to_i
 end
 
 until choose_case9 != users_case and used_cases.include?(choose_case9) == false
-    puts "You've already chosen that case, please pick another one"
+    puts "You've already chosen that case, please pick another one".colorize(:red)
     choose_case9 = gets.chomp.to_i
 end
 
@@ -288,12 +291,12 @@ puts "9 cases down, lets continue"
 
 choose_case10 = gets.chomp.to_i
     until choose_case10 <= 15 and choose_case10 > 0
-        puts "Please pick a number between 1 and 15"
+        puts "Please pick a number between 1 and 15".colorize(:red)
         choose_case10 = gets.chomp.to_i
     end
 
 until choose_case10 != users_case and used_cases.include?(choose_case10) == false
-    puts "You've already chosen that case, please pick another"
+    puts "You've already chosen that case, please pick another".colorize(:red)
     choose_case10 = gets.chomp.to_i
 end
 
@@ -309,12 +312,12 @@ puts "Okay, we're heading into the end game now. Lets continue"
 
 choose_case11 = gets.chomp.to_i
     until choose_case11 <= 15 and choose_case11 > 0
-        puts "Please pick a number between 1 and 15"
+        puts "Please pick a number between 1 and 15".colorize(:red)
         choose_case11 = gets.chomp.to_i
     end
 
 until choose_case11 != users_case and used_cases.include?(choose_case11) == false
-    puts "You've already chosen that case, please pick another"
+    puts "You've already chosen that case, please pick another".colorize(:red)
     choose_case11 = gets.chomp.to_i
 end
 
@@ -330,12 +333,12 @@ puts "Alright, lets keep marching on. Pick another case"
 
 choose_case12 = gets.chomp.to_i
     until choose_case12 <= 15 and choose_case12 > 0
-        puts "Please pick a number between 1 and 15"
+        puts "Please pick a number between 1 and 15".colorize(:red)
         choose_case12 = gets.chomp.to_i
     end
 
 until choose_case12 != users_case and used_cases.include?(choose_case12) == false
-    puts "You've already chosen that case, please pick another"
+    puts "You've already chosen that case, please pick another".colorize(:red)
     choose_case12 = gets.chomp.to_i
 end
 
@@ -383,12 +386,12 @@ puts "Please choose a case"
 
 choose_case13 = gets.chomp.to_i
     until choose_case13 <= 15 and choose_case13 > 0
-        puts "Please pick a number between 1 and 15"
+        puts "Please pick a number between 1 and 15".colorize(:red)
         choose_case13 = gets.chomp.to_i
     end
 
 until choose_case13 != users_case and used_cases.include?(choose_case13) == false
-    puts "You've already chosen that case, please pick another"
+    puts "You've already chosen that case, please pick another".colorize(:red)
     choose_case13 = gets.chomp.to_i
 end
 
@@ -406,12 +409,12 @@ puts "Please choose your last case"
 
 choose_case14 = gets.chomp.to_i
     until choose_case14 <= 15 and choose_case14 > 0
-        puts "Please pick a number between 1 and 15"
+        puts "Please pick a number between 1 and 15".colorize(:red)
         choose_case14 = gets.chomp.to_i
     end
 
 until choose_case14 != users_case and used_cases.include?(choose_case14) == false
-    puts "You've already chosen that case, please pick another"
+    puts "You've already chosen that case, please pick another".colorize(:red)
     choose_case14 = gets.chomp.to_i
 end
 
