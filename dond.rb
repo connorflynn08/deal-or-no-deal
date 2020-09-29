@@ -121,13 +121,13 @@ until dond1 == "deal" or dond1 == "no deal"
     dond1 = gets.chomp.downcase
 end
     if dond1 == "deal"
-        puts "Deal! Your total winnings is $#{banker1}. Thanks for playing!"
+        puts "Deal! Your total winnings is $#{banker1}. Thanks for playing!".colorize(:color => :green, :background => :red)
         pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond1 == "no deal"
-        puts "No deal! Lets continue!"
+        puts "No deal! Lets continue!".colorize(:color => :red, :background => :green)
         pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
@@ -250,18 +250,18 @@ dond2 = gets.chomp.downcase
 
 
 until dond2 == "deal" or dond2 == "no deal"
-    puts "Please enter deal or no deal"
+    puts "Please enter deal or no deal".colorize(:red)
     dond2 = gets.chomp.downcase
 end 
 
     if dond2 == "deal"
-        puts "Deal! your total winnings is $#{banker2}. Thanks for playing!"
+        puts "Deal! your total winnings is $#{banker2}. Thanks for playing!".colorize(:color => :green, :background => :red)
         pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond2 == "no deal"
-        puts "No deal! Lets continue!"
+        puts "No deal! Lets continue!".colorize(:color => :red, :background => :green)
         pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
@@ -364,18 +364,18 @@ dond3 = gets.chomp.downcase
 
 
 until dond3 == "deal" or dond3 == "no deal"
-    puts "Please enter deal or no deal"
+    puts "Please enter deal or no deal".colorize(:red)
     dond3 = gets.chomp.downcase
 end 
 
     if dond3 == "deal"
-        puts "Deal! your total winnings is $#{banker3}. Thanks for playing!"
+        puts "Deal! your total winnings is $#{banker3}. Thanks for playing!".colorize(:color => :green, :background => :red)
         pid = fork{ exec 'afplay', "applause.mp3" }
         exit
     end
 
     if dond3 == "no deal"
-        puts "No deal! Lets continue!"
+        puts "No deal! Lets continue!".colorize(:color => :red, :background => :green)
         pid = fork{ exec 'afplay', "applause.mp3" }
     end
 
