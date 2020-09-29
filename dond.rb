@@ -1,6 +1,6 @@
-# Pseudocode
 # Deal or no deal. The user picks a a case between 1 and 20
 # the money behind the case is random, and cases will use a key and value system for sotring data, possible even 2 arrays mihgt make it easier
+# Pseudocode
 # "The Banker" will periodically (every 5 turns?) offer the player a sum of money, which the player is able to accept or decline
 # if accepted the game ends, if declined, the game continues
 # the game will continue until a deal is accepted OR the users case is opened
@@ -430,7 +430,7 @@ puts "Alright, this is it. Lets see how you did"
 
 puts "#{choose_case14} contained #{opened_case14}"
 
-puts "Which means your case contained #{users_complete_case}"
+puts "Which means your case contained #{users_complete_case}".colorize(:yellow).on_blue.blink
 
 puts "Congratulations! Thanks for playing Deal or no Deal!"
 
