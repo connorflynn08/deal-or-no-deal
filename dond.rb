@@ -9,9 +9,27 @@
 
 require 'colorize'
 require 'colorized_string'
+require 'asciiart'
+puts "
+
+
+
+"
 
 pid = fork{ exec 'afplay', "intro.mp3" }
 
+
+puts " /$$$$$$$                      /$$                                 /$$   /$$                 /$$$$$$$                      /$$
+| $$__  $$                    | $$                                | $$$ | $$                | $$__  $$                    | $$
+| $$  \ $$  /$$$$$$   /$$$$$$ | $$        /$$$$$$   /$$$$$$       | $$$$| $$  /$$$$$$       | $$  \ $$  /$$$$$$   /$$$$$$ | $$
+| $$  | $$ /$$__  $$ |____  $$| $$       /$$__  $$ /$$__  $$      | $$ $$ $$ /$$__  $$      | $$  | $$ /$$__  $$ |____  $$| $$
+| $$  | $$| $$$$$$$$  /$$$$$$$| $$      | $$  \ $$| $$  \__/      | $$  $$$$| $$  \ $$      | $$  | $$| $$$$$$$$  /$$$$$$$| $$
+| $$  | $$| $$_____/ /$$__  $$| $$      | $$  | $$| $$            | $$\  $$$| $$  | $$      | $$  | $$| $$_____/ /$$__  $$| $$
+| $$$$$$$/|  $$$$$$$|  $$$$$$$| $$      |  $$$$$$/| $$            | $$ \  $$|  $$$$$$/      | $$$$$$$/|  $$$$$$$|  $$$$$$$| $$
+|_______/  \_______/ \_______/|__/       \______/ |__/            |__/  \__/ \______/       |_______/  \_______/ \_______/|__/
+                                                                                                                              
+                                                                                                                              
+"
 puts "Welcome to Deal or No Deal!"
 puts "The rules are simple. Each briefcase has a number in it that indicates the amount of money you'll win if when you open it. 
 You will systematically choose cases until only yours remains. 
