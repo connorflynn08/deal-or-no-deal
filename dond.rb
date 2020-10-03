@@ -11,11 +11,6 @@ require 'colorize'
 require 'colorized_string'
 require 'ascii-image'
 require 'rspec'
-puts "
-
-
-
-"
 
 pid = fork{ exec 'afplay', "intro.mp3" }
 
@@ -183,7 +178,7 @@ used_cases << choose_case4
 
 puts "Lets see what's behind #{choose_case4}"
 
-puts "#{choose_case4} contained #{opened_case4}"
+puts "Case #{choose_case4} contained #{opened_case4}"
 
 puts "Alright, another case down. Choose another"
 
@@ -203,7 +198,7 @@ used_cases << choose_case5
 
 puts "lets see what was in #{choose_case5}!"
 
-puts "#{choose_case5} contained #{opened_case5}"
+puts "Case #{choose_case5} contained #{opened_case5}"
 
 puts "Alright, we're a third of the way there"
 
@@ -225,7 +220,7 @@ used_cases << choose_case6
 
 puts "Ok, lets see what was in #{choose_case6}"
 
-puts "#{choose_case6} contained #{opened_case6}"
+puts "Case #{choose_case6} contained #{opened_case6}"
 
 puts "Ok, going strong. Lets open some more cases"
 
@@ -245,7 +240,7 @@ used_cases << choose_case7
 
 puts "Alright, time to see what was behind #{choose_case7}"
 
-puts "#{choose_case7} contained #{opened_case7}"
+puts "Case #{choose_case7} contained #{opened_case7}"
 
 puts "Getting closer, lets open some more"
 
@@ -265,7 +260,7 @@ used_cases << choose_case8
 
 puts "Ok, lets have a look at what was in case number #{choose_case8}"
 
-puts "#{choose_case8} contained #{opened_case8}"
+puts "Case #{choose_case8} contained #{opened_case8}"
 
 puts "Ring Ring!"
 
@@ -316,7 +311,7 @@ used_cases << choose_case9
 
 puts "Ok, let's see what was behind case number #{choose_case9}"
 
-puts "#{choose_case9} contained #{opened_case9}"
+puts "Case #{choose_case9} contained #{opened_case9}"
 
 puts "9 cases down, lets continue"
 
@@ -337,7 +332,7 @@ used_cases << choose_case10
 
 puts "Time to look inside case #{choose_case10}"
 
-puts "#{choose_case10} contained #{opened_case10}"
+puts "Case #{choose_case10} contained #{opened_case10}"
 
 puts "Okay, we're heading into the end game now. Lets continue"
 
@@ -358,7 +353,7 @@ used_cases << choose_case11
 
 puts "Lets see what was inside case number #{choose_case11}"
 
-puts "#{choose_case11} contained #{opened_case11}"
+puts "Case #{choose_case11} contained #{opened_case11}"
 
 puts "Alright, lets keep marching on. Pick another case"
 
@@ -432,7 +427,7 @@ used_cases << choose_case13
 
 puts "Alright, lets have a peek behind case number #{choose_case13}"
 
-puts "#{choose_case13} contained #{opened_case13}"
+puts "Case #{choose_case13} contained #{opened_case13}"
 
 puts "Ok, this is the last case to choose before we open up yours"
 
@@ -455,7 +450,7 @@ used_cases << choose_case14
 
 puts "Alright, this is it. Lets see how you did"
 
-puts "#{choose_case14} contained #{opened_case14}"
+puts "Case #{choose_case14} contained #{opened_case14}"
 
 puts "Which means your case contained #{users_complete_case}".colorize(:yellow).on_blue.blink
 
