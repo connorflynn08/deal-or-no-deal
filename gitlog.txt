@@ -1,0 +1,122 @@
+commit 75f7d9fe030b46dc713977c29f425b68bb06b85e
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:51:40 2020 +1000
+
+    Added footnote
+
+commit 9abf3f1008eef4e20d5b60c97c887834e3e75dee
+Merge: c6a818b 781d8b8
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:50:32 2020 +1000
+
+    Merge branch 'master' of https://github.com/connorflynn08/deal-or-no-deal
+
+commit c6a818bd09f011acd533b75c6e5fd39b6727e3cd
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:50:16 2020 +1000
+
+    Added a footnote
+
+commit 781d8b82f4a8c8eb3f187ec5524afdfde12364db
+Author: connorflynn08 <70245658+connorflynn08@users.noreply.github.com>
+Date:   Sat Oct 3 19:48:13 2020 +1000
+
+    Create README.md
+    
+    Created WORKING readme.md
+
+commit e40645be0213d94a880fec2dc7ced3744a337482
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:46:01 2020 +1000
+
+    Added readme docs
+
+commit 8e0ccc3b34bf0ebb811a3b1907fd91a99dd14a87
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:38:09 2020 +1000
+
+    Fixed some puts
+
+commit 37404cb98cf8616a08a1adc717f3fb1e93ff1d9a
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 19:05:43 2020 +1000
+
+    Added flowchart
+
+commit e140cb64ea69b4fb619c4e9f6caba6ed65da4f04
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Sat Oct 3 18:29:39 2020 +1000
+
+    Added Rspec, made some changes to ASCII art
+
+commit 799f048e92c69c6b346d063b25aa804020661008
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Wed Sep 30 12:16:37 2020 +1000
+
+    Fixed ascii art
+
+commit 1fff6e82b40a6cf0b0716ec463e2c2d415d92fa7
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Wed Sep 30 12:14:08 2020 +1000
+
+    Added Asciiart
+
+commit 4289b6003e89ca125e150166c62586f9ccb1ac78
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Wed Sep 30 08:55:17 2020 +1000
+
+    Fixed spelling errors
+
+commit aa21619c7a43c17101fc08115a4686ee1c020add
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Tue Sep 29 16:21:42 2020 +1000
+
+    Added more colour, fixed some things
+
+commit 28e78c30adefe4eee5cc790d06df69f90842510f
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Tue Sep 29 13:49:25 2020 +1000
+
+    Fixed bug where when using a string on the users case, it automatically set the case to 0
+
+commit 622c4ce464f1487ab0bade7f6872151f59c2c9d1
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Tue Sep 29 13:44:27 2020 +1000
+
+    Added more colors
+
+commit afc5184348300116ca6a163350d3ab9442fd6bb4
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Tue Sep 29 13:35:21 2020 +1000
+
+    Added ruby gem colorize and coloured error messages in red
+
+commit 19818f8a1a3d8416e1b02f4fc2dda92b4105b155
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Tue Sep 29 12:46:30 2020 +1000
+
+    Added sound clips for conditions
+
+commit 6d55b433faaf282ee0fce44254d15c91bd376f16
+Author: Connor Flynn <connorflynn95@hotmail.com>
+Date:   Mon Sep 28 11:27:50 2020 +1000
+
+    App is working properly without known errors. base code is done. Will be implementing gems and making minor tweaks
+
+commit 954eefa4ab357dee46ce064a72ef82e6d498f971
+Author: Connor <noname@Connors-MacBook-Pro.local>
+Date:   Mon Sep 28 10:36:19 2020 +1000
+
+    Added more lines of code, refactored conditionals to be much smaller, looks a lot cleaner
+
+commit df0d7902b099bc6ac61345b8830a842b4274e87c
+Author: Connor <noname@Connors-MBP.lan>
+Date:   Fri Sep 25 18:27:00 2020 +1000
+
+    added more lines to the game, fixed some bugs when user input was 0
+
+commit a81a85b9ab15ce687819ff4fda627298260220d4
+Author: Connor <noname@Nos-MacBook-Pro.lan>
+Date:   Fri Sep 25 02:32:36 2020 +1000
+
+    Initial commit for deal or no deal game.
