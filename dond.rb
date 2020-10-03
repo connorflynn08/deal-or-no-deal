@@ -462,3 +462,4 @@ puts "Congratulations! Thanks for playing Deal or no Deal!"
 
 pid = fork{ exec 'afplay', "intro.mp3" }
 
+#Please feel free to mess around with the code, add your own features, and do whatever you'd like.
