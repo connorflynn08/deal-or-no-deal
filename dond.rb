@@ -9,7 +9,8 @@
 
 require 'colorize'
 require 'colorized_string'
-require 'asciiart'
+require 'ascii-image'
+require 'rspec'
 puts "
 
 
@@ -19,18 +20,24 @@ puts "
 pid = fork{ exec 'afplay', "intro.mp3" }
 
 
-puts"
- /$$$$$$$                      /$$                                 /$$   /$$                 /$$$$$$$                      /$$
-| $$__  $$                    | $$                                | $$$ | $$                | $$__  $$                    | $$
-| $$  \ $$  /$$$$$$   /$$$$$$ | $$        /$$$$$$   /$$$$$$       | $$$$| $$  /$$$$$$       | $$  \ $$  /$$$$$$   /$$$$$$ | $$
-| $$  | $$ /$$__  $$ |____  $$| $$       /$$__  $$ /$$__  $$      | $$ $$ $$ /$$__  $$      | $$  | $$ /$$__  $$ |____  $$| $$
-| $$  | $$| $$$$$$$$  /$$$$$$$| $$      | $$  \ $$| $$  \__/      | $$  $$$$| $$  \ $$      | $$  | $$| $$$$$$$$  /$$$$$$$| $$
-| $$  | $$| $$_____/ /$$__  $$| $$      | $$  | $$| $$            | $$\  $$$| $$  | $$      | $$  | $$| $$_____/ /$$__  $$| $$
-| $$$$$$$/|  $$$$$$$|  $$$$$$$| $$      |  $$$$$$/| $$            | $$ \  $$|  $$$$$$/      | $$$$$$$/|  $$$$$$$|  $$$$$$$| $$
-|_______/  \_______/ \_______/|__/       \______/ |__/            |__/  \__/ \______/       |_______/  \_______/ \_______/|__/
+puts "
+
+_______                       __                                  __    __                  _______                       __ 
+/       \                     /  |                                /  \  /  |                /       \                     /  |
+$$$$$$$  |  ______    ______  $$ |        ______    ______        $$  \ $$ |  ______        $$$$$$$  |  ______    ______  $$ |
+$$ |  $$ | /      \  /      \ $$ |       /      \  /      \       $$$  \$$ | /      \       $$ |  $$ | /      \  /      \ $$ |
+$$ |  $$ |/$$$$$$  | $$$$$$  |$$ |      /$$$$$$  |/$$$$$$  |      $$$$  $$ |/$$$$$$  |      $$ |  $$ |/$$$$$$  | $$$$$$  |$$ |
+$$ |  $$ |$$    $$ | /    $$ |$$ |      $$ |  $$ |$$ |  $$/       $$ $$ $$ |$$ |  $$ |      $$ |  $$ |$$    $$ | /    $$ |$$ |
+$$ |__$$ |$$$$$$$$/ /$$$$$$$ |$$ |      $$ \__$$ |$$ |            $$ |$$$$ |$$ \__$$ |      $$ |__$$ |$$$$$$$$/ /$$$$$$$ |$$ |
+$$    $$/ $$       |$$    $$ |$$ |      $$    $$/ $$ |            $$ | $$$ |$$    $$/       $$    $$/ $$       |$$    $$ |$$ |
+$$$$$$$/   $$$$$$$/  $$$$$$$/ $$/        $$$$$$/  $$/             $$/   $$/  $$$$$$/        $$$$$$$/   $$$$$$$/  $$$$$$$/ $$/ 
                                                                                                                               
                                                                                                                               
+                                                                                                                              
+
 "
+
+
 puts "Welcome to Deal or No Deal!"
 puts "The rules are simple. Each briefcase has a number in it that indicates the amount of money you'll win if when you open it. 
 You will systematically choose cases until only yours remains. 
@@ -453,6 +460,10 @@ puts "#{choose_case14} contained #{opened_case14}"
 puts "Which means your case contained #{users_complete_case}".colorize(:yellow).on_blue.blink
 
 puts "Congratulations! Thanks for playing Deal or no Deal!"
+
+# ascii = ASCII_Image.new("andy.jpg")
+# ascii.build(40)
+
 
 pid = fork{ exec 'afplay', "intro.mp3" }
 
